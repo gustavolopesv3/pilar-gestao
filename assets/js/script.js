@@ -72,12 +72,16 @@ function addInput(){
 }
 
 function startPilar(){
-    clean()
-    getNames()
-    getSetores()    
-    sorteioNomes()
-    printNames()
-    sorteioSetores()
-    printSetores()
+    for (passo = 0; passo < 15; passo++) {
+        clean()
+        getNames()
+        getSetores()    
+        sorteioNomes()
+        printNames()
+        sorteioSetores()
+        printSetores()
+        console.log(passo)
+    }
+    
     
 }
