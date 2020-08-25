@@ -55,6 +55,19 @@ function printSetores(){
     }   
 }
 
+function clean(){
+    resNome = document.getElementById('resultadoNomes').children
+    resSetor = document.getElementById('resultadoSetores').children
+    resNome = ['']
+    resSetor = ['']
+    resultadoNomes.innerHTML = resNome
+    resultadoSetores.innerHTML = resSetor
+}
+
+
+
+
+
 function startPilar(){
     getNames()
     getSetores()    
@@ -65,3 +78,7 @@ function startPilar(){
 }
 
 
+function refazer(){
+    buttonEmbaralhar = document.getElementById('embaralhar')
+    buttonEmbaralhar.style.display = 'none'
+}
