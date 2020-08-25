@@ -58,27 +58,26 @@ function printSetores(){
 function clean(){
     resNome = document.getElementById('resultadoNomes').children
     resSetor = document.getElementById('resultadoSetores').children
-    resNome = ['']
-    resSetor = ['']
+    resNome = null
+    resSetor = null
+    arrayNomes = []
+    arraySetores = []
     resultadoNomes.innerHTML = resNome
     resultadoSetores.innerHTML = resSetor
 }
 
-
-
-
+function addInput(){
+    let newInputName = document.getElementsByClassName("names colunas")
+    newInputName.push(`<input type="text" placeholder="Nome">`) 
+}
 
 function startPilar(){
+    clean()
     getNames()
     getSetores()    
     sorteioNomes()
     printNames()
     sorteioSetores()
     printSetores()
-}
-
-
-function refazer(){
-    buttonEmbaralhar = document.getElementById('embaralhar')
-    buttonEmbaralhar.style.display = 'none'
+    
 }
