@@ -43,14 +43,14 @@ img{
     margin: 5px;
     border-radius: 15px;
     border: none;
-    width: 300px;
+    width: 200px;
 
 }
 
 .colunas{
     display: flex;
     flex-flow: column;
-    width: 400px;
+    width: 230px;
 }
 
 .matchPilar{
