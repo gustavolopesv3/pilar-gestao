@@ -19,42 +19,49 @@ function getNames(){
 function getSetores(){
     for ( listaSetores of inputSetores){
         arraySetores.push(listaSetores.value)
-        resultadoSetores.innerHTML += `<p>${listaSetores.value}</p>`
+
     }
 }
 
 function sorteioNomes(){
-    let unshuffled = arrayNomes
+    var unshuffled = arrayNomes
+    var shuffled = unshuffled
+    .map((a) => ({sort: Math.random(), value: a}))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
+    nomesAleatorio = shuffled
+}
+
+
+
+function sorteioSetores(){
+    let unshuffled = arraySetores
     let shuffled = unshuffled
     .map((a) => ({sort: Math.random(), value: a}))
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value)
-    console.log(shuffled)
+    setoresAleatorio = shuffled
 }
 
-// function sorteioSetores(){
-//     let unshuffled = arraySetores
-//     let shuffled = unshuffledpa
-//     .map((a) => ({sort: Math.random(), value: a}))
-//     .sort((a, b) => a.sort - b.sort)
-//     .map((a) => a.value)
-//     console.log(shuffled)
-// }
+function printNames(){
+    for ( let i of nomesAleatorio){
+        resultadoNomes.innerHTML +=`<p>${i}</p>`
+    }   
+}
 
-function printNames(sorteioNomes){
-    let embaralhado = sorteioNomes.shuffled.length
-    for (i in embaralhado){
-        console.log(`nome ${i}`)
-        resultadoNomes.innerHTML += `<p>${i}</p>`
-        console.log(`nome ${i}`)
-    }
+function printSetores(){
+    for ( let i of setoresAleatorio){
+        resultadoSetores.innerHTML +=`<p>${i}</p>`
+    }   
 }
 
 function startPilar(){
     getNames()
-    getSetores()
+    getSetores()    
     sorteioNomes()
     printNames()
-    
+    sorteioSetores()
+    printSetores()
 }
+
 
