@@ -1,60 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=in, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Pilar</title>
-</head>
-<body>
-
-    <section>
-        <div class="container">
-            <div class="image">
-                <img src="./assets/img/pilar.svg" alt="imgPilar">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div class="container">
+          <div class="box">
+              <img src="./assets/img/pilar.svg" alt="pilar">
+            <div class="entradas">
+                <div class="nomes">
+                    <label for="nomes">Nomes</label>
+                    <input type="text" class="func">
+                    <input type="text" class="func">
+                    <input type="text" class="func">
+                    <input type="text" class="func">
+                </div>
+               <div class="departamentos">
+                   <label for="departamentos">Departamentos</label>
+                <input type="text" class="dep">
+                <input type="text" class="dep">
+                <input type="text" class="dep">
+                <input type="text" class="dep">
+               </div>         
             </div>
-            <div class="pilares">
-                
-                <div class="names colunas">
-                    <input type="text" placeholder="Nome" >
-                    <input type="text" placeholder="Nome" >
-                    <input type="text" placeholder="Nome" >
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Nome" >
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Nome">
+            <div id="result">
+                <div id="resNome">
+                    <p>Gustavo</p>
+                    <p>outer</p>
+                    <p>Outro Nome</p>
                 </div>
-                <div class="setores colunas">
-                    <input type="text" placeholder="Setor">
-                    <input type="text" placeholder="Setor" >
-                    <input type="text" placeholder="Setor" >
-                    <input type="text" placeholder="Setor" >
-                    <input type="text" placeholder="Setor" >
-                    <input type="text" placeholder="Setor" >
-                    <input type="text" placeholder="Setor" >
-                </div>
-            </div>
-            <div class="matchPilar">
-                <div id="resultadoNomes">
-
-                </div>
+                <div id="x">
                     
-                <div id="resultadoSetores">
-
                 </div>
-            </div>
-            
-            <button id="embaralhar" onclick="startPilar()">Embaralhar</button>
-        </div>
-        
-        
-        
-    
-        </div>
-    </section>
+                <div id="resSetor">
+                    <p>T.I</p>
+                    <p>Portaria</p>
+                    <p>limpeza</p>
+                </div>
+                
+              </div>
+            <button onclick="main()">SORTEAR</button>
+          </div>
+          </div>
+          
 
+      
     
-<script src="./assets/js/script.js"></script>
-</body>
-
+    
+    <script src="./assets/js/scritp.js"></script>
+  </body>
 </html>
